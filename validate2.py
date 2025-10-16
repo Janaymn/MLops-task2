@@ -9,12 +9,12 @@ import pickle
 print("Script started")
 
 # Load model
-with open('models/model1.pkl', 'rb') as f:
+with open('models/model2.pkl', 'rb') as f:
     model = pickle.load(f)
 print("Model loaded successfully")
 
 # Load test data
-test_df = pd.read_csv('data/test1.csv')
+test_df = pd.read_csv('data/test2.csv')
 print("Test data loaded successfully, shape:", test_df.shape)
 
 # Separate features and target
@@ -30,7 +30,7 @@ acc = accuracy_score(y, preds)
 print("Accuracy calculated:", acc)
 
 
-with open('metrics1.json', 'w') as f:
+with open('metrics2.json', 'w') as f:
     json.dump({'accuracy': acc}, f)
 print("Metrics saved")
 
@@ -42,5 +42,5 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 
-plt.savefig('confusion_matrix1.png')
-print("Confusion matrix saved as confusion_matrix1.png")
+plt.savefig('confusion_matrix2.png')
+print("Confusion matrix saved as confusion_matrix2.png")
