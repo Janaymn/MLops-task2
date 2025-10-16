@@ -1,5 +1,5 @@
 stages:
-  preprocess1:
+  preprocess:
     cmd: python preprocess2.py
     deps:
       - preprocess2.py
@@ -7,7 +7,7 @@ stages:
       - data/train2.csv
       - data/test2.csv
 
-  train1:
+  train:
     cmd: python train2.py
     deps:
       - train2.py
